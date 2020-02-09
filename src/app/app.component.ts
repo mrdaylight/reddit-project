@@ -7,23 +7,21 @@ import { Article } from './article/article.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-	article:Article[];
-constructor()
-{
+	articles:Article[];
+
+constructor() {
 this.articles=[
 new Article('Angular', 'http://angular.io',5),
 new Article('Google', 'http://google.ie',3),
 new Article('TikTok', 'http://tiktok,com',1)
-];
+];}
 
-}
 	addArticle(title:HTMLInputElement, link:HTMLInputElement):Boolean {
 	this.articles.push(new Article(title.value,link.value));
 	title.value = '';
 	link.value = '';
 
 		console.log(`Adding aritcle Title:${title.value} and adding article Link:${link.value} `);
-		console.log('test');
 		return false;
 	}
 

@@ -11,11 +11,11 @@ import { Article } from './article.model';
 export class ArticleComponent implements OnInit {
 @Input() article:Article;
 
-article:Article;
+//article:Article;
 
 
   constructor() {
-	  //this.article= new Article("Angular","http://angular.io",10)
+	  //this.article = new Article("Angular","http://angular.io",10)
   }
 
   ngOnInit() {
