@@ -12,9 +12,9 @@
 	<label for="link">Link</label>
 	<input name="link" class="form-control" placeholder="enter URL" #newLink>
 		</div>
-	<button (click)="addArticle(newTitle,newLink)">Submit Link</button>
+	<button (click)="addArticle(newTitle,newLink)" class="btn btn-primary">Submit Link</button>
 
 	</fieldset>
 </form>
 
-<app-article></app-article>
+<app-article *ngFor="let article of sortedArticles()" [article]='article'></app-article>
